@@ -3,9 +3,8 @@
   --blue:#3483FA;
   --bg:#F4F6F9;
   --white:#FFFFFF;
-  --text:#2D3277;
   --muted:#6B7280;
-  --shadow:0 10px 25px rgba(0,0,0,.08);
+  --shadow:0 10px 25px rgba(0,0,0,.10);
 }
 
 *{
@@ -75,7 +74,6 @@ body{
 .hero h2{
   margin:0;
   font-size:36px;
-  color:#222;
 }
 
 .hero p{
@@ -120,7 +118,6 @@ body{
 .area-card h3{
   margin:18px 0 0;
   font-size:24px;
-  color:#222;
 }
 
 @media(max-width:900px){
