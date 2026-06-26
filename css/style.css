@@ -1,0 +1,17 @@
+/* =======================================
+   HUB OPERACIONAL
+   ======================================= */
+
+:root{
+    --meli-yellow:#FFE600;
+    --background:#F4F6F9;
+    --white:#FFFFFF;
+    --text:#333333;
+    --shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+body{
+    margin:0;
+    background:var(--background);
+    font-family:Arial, Helvetica, sans-serif;
+}
