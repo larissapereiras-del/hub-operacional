@@ -8,41 +8,70 @@
 </head>
 
 <body>
-
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo">●</span>
-      <div>
-        <h1>Hub Operacional</h1>
-        <p>Sua central de conhecimento da operação</p>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">HO</div>
+        <div>
+          <h1>Hub Operacional</h1>
+          <p>Centro de Conhecimento CAD</p>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Olá, Larissa 👋</h2>
-      <p>O que você deseja acessar hoje?</p>
+      <nav class="menu">
+        <button class="menu-item active">Página Inicial</button>
+        <button class="menu-item">Outbound</button>
+        <button class="menu-item">Inbound</button>
+        <button class="menu-item">MWH</button>
+        <button class="menu-item">Retiros</button>
+        <button class="menu-item">CIE</button>
+        <button class="menu-item">ICQA</button>
+        <button class="menu-item">Manutenção</button>
+        <button class="menu-item">RC</button>
+        <button class="menu-item">Training</button>
+        <button class="menu-item" onclick="abrirAdmin()">Administração</button>
+      </nav>
+    </aside>
 
-      <input 
-        class="search"
-        type="text"
-        placeholder="Pesquisar treinamentos, POPs ou processos..."
-      >
-    </section>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span>Hub Operacional</span>
+          <h2>Página Inicial</h2>
+        </div>
 
-    <section class="grid-areas">
-      <div class="area-card">📦 <h3>Outbound</h3></div>
-      <div class="area-card">📥 <h3>Inbound</h3></div>
-      <div class="area-card">🏭 <h3>MWH</h3></div>
-      <div class="area-card">🚛 <h3>Retiros</h3></div>
-      <div class="area-card">📋 <h3>CIE</h3></div>
-      <div class="area-card">✅ <h3>ICQA</h3></div>
-      <div class="area-card">🔧 <h3>Manutenção</h3></div>
-      <div class="area-card">♻️ <h3>RC</h3></div>
-      <div class="area-card">🎓 <h3>Training</h3></div>
-    </section>
-  </main>
+        <div class="top-actions">
+          <input type="text" placeholder="Pesquisar treinamentos, POPs ou processos...">
+          <div class="profile">LP</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="hero">
+          <div>
+            <span class="badge">Centro de Conhecimento CAD</span>
+            <h3>Olá, Larissa 👋</h3>
+            <p>Acesse treinamentos, POPs, vídeos, procedimentos e materiais oficiais das áreas do CAD.</p>
+          </div>
+          <button>Explorar áreas</button>
+        </div>
+
+        <h3 class="title">Áreas Operacionais</h3>
+
+        <div class="grid">
+          <div class="card"><span>📦</span><h4>Outbound</h4><p>Treinamentos e fluxos operacionais.</p></div>
+          <div class="card"><span>📥</span><h4>Inbound</h4><p>Recebimento, entrada e auditoria.</p></div>
+          <div class="card"><span>🏭</span><h4>MWH</h4><p>Materiais e procedimentos da área.</p></div>
+          <div class="card"><span>🚛</span><h4>Retiros</h4><p>Fluxos, rotinas e tratativas.</p></div>
+          <div class="card"><span>📋</span><h4>CIE</h4><p>Controles, indicadores e processos.</p></div>
+          <div class="card"><span>✅</span><h4>ICQA</h4><p>Qualidade, auditorias e inventário.</p></div>
+          <div class="card"><span>🔧</span><h4>Manutenção</h4><p>Equipamentos, chamados e checklists.</p></div>
+          <div class="card"><span>♻️</span><h4>RC</h4><p>Triagem, expedição e procedimentos.</p></div>
+          <div class="card"><span>🎓</span><h4>Training</h4><p>Agenda, auditório e multiplicadores.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <script src="js/app.js"></script>
 </body>
