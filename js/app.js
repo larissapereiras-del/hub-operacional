@@ -222,6 +222,16 @@ responsavel: document.getElementById("responsavel").value,
 }
 
 function excluirConteudo(index) {
+  const item = conteudos[index];
+
+  const confirmar = confirm(
+    `Deseja realmente excluir "${item.titulo}"?`
+  );
+
+  if (!confirmar) {
+    return;
+  }
+
   conteudos.splice(index, 1);
   salvarConteudos();
   abrirAdmin();
@@ -261,7 +271,7 @@ document.querySelectorAll(".menu-item").forEach(item => {
     item.classList.add("active");
 
     if (area === "Outbound") abrirOutbound();
-    if (area === "Administração") abrirAdmin();
+    if (area === "Administração") validarAcessoAdmin();
     if (area === "Página Inicial") voltarHome();
   });
 });
@@ -354,4 +364,13 @@ function pesquisarConteudos() {
       }
     </div>
   `;
+}
+function validarAcessoAdmin() {
+  const senha = prompt("Digite a senha de acesso à Administração:");
+
+  if (senha === "training123") {
+    abrirAdmin();
+  } else {
+    alert("Senha incorreta. Acesso negado.");
+  }
 }
