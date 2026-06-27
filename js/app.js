@@ -301,3 +301,57 @@ function editarConteudo(index) {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+const pesquisa = document.getElementById("pesquisaGlobal");
+
+if (pesquisa) {
+  pesquisa.addEventListener("input", pesquisarConteudos);
+}
+
+function pesquisarConteudos() {
+  const termo = pesquisa.value.toLowerCase().trim();
+
+  if (termo === "") {
+    return;
+  }
+
+  const resultados = conteudos.filter(item =>
+    item.titulo.toLowerCase().includes(termo) ||
+    item.descricao.toLowerCase().includes(termo) ||
+    item.processo.toLowerCase().includes(termo)
+  );
+
+  content.innerHTML = `
+    <div class="hero">
+      <div>
+        <span class="badge">Pesquisa</span>
+        <h3>Resultados encontrados</h3>
+        <p>${resultados.length} conteúdo(s) encontrados.</p>
+      </div>
+      <button onclick="voltarHome()">Voltar</button>
+    </div>
+
+    <div class="search-results">
+      ${
+        resultados.length === 0
+        ? `<div class="empty">Nenhum conteúdo encontrado.</div>`
+        : resultados.map(item => `
+            <div class="search-item">
+              <div class="search-path">
+                ${item.area} > ${item.processo} > ${item.categoria}
+              </div>
+
+              <h4>${item.titulo}</h4>
+
+              <p>${item.descricao}</p>
+
+              <br>
+
+              <a href="${item.link}" target="_blank">
+                Abrir material →
+              </a>
+            </div>
+          `).join("")
+      }
+    </div>
+  `;
+}
