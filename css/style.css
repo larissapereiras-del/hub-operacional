@@ -332,3 +332,27 @@ body{
   font-size:14px;
   margin-bottom:10px;
 }
+.admin-dashboard{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.dash-card{
+  background:#fff;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.dash-card span{
+  color:#666;
+  font-weight:bold;
+}
+
+.dash-card strong{
+  display:block;
+  margin-top:12px;
+  font-size:34px;
+}

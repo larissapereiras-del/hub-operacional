@@ -331,6 +331,27 @@ function pesquisarConteudos() {
   );
 
   content.innerHTML = `
+      <div class="admin-dashboard">
+      <div class="dash-card">
+        <span>Total de conteúdos</span>
+        <strong>${conteudos.length}</strong>
+      </div>
+
+      <div class="dash-card">
+        <span>Treinamentos</span>
+        <strong>${conteudos.filter(i => i.categoria === "Treinamentos").length}</strong>
+      </div>
+
+      <div class="dash-card">
+        <span>Micro Learning</span>
+        <strong>${conteudos.filter(i => i.categoria === "Micro Learning").length}</strong>
+      </div>
+
+      <div class="dash-card">
+        <span>Interativos</span>
+        <strong>${conteudos.filter(i => i.categoria === "Interativos").length}</strong>
+      </div>
+    </div>
     <div class="hero">
       <div>
         <span class="badge">Pesquisa</span>
